@@ -20,8 +20,12 @@ gem 'mysql', '~> 2.8.1', :require => nil, :group => 'mysql'
 gem 'pg', '~> 0.9.0', :require => nil, :group => 'pg'
 gem 'aws-s3', '~> 0.6.2', :require => 'aws/s3'
 gem 'hpricot', '~> 0.8.2'
+<<<<<<< HEAD
 gem 'json'
 gem 'oauth2'
+=======
+gem 'mustache', '~> 0.11.0'
+>>>>>>> 59a102e... Initial commit for hook with template
 
 group :plugins do
   gem 'sprockets-rails', '~> 0.0.1'
