@@ -20,34 +20,34 @@ dependencies:
     version: ~> 1.1.5
     require: []
 
-  pg: 
-    group: 
-    - :pg
-    version: ~> 0.9.0
-    require: []
-
-  libxml-ruby: 
+  mustache: 
     group: 
     - :default
-    version: ~> 1.1.3
-    require: 
-    - libxml
-  text-format: 
-    group: 
-    - :rails
-    version: ">= 0.6.3"
-    require: 
-    - text/format
+    version: ~> 0.11.0
   rails: 
     group: 
     - :rails
     version: ~> 2.3.5
     require: []
 
-  mustache: 
+  text-format: 
+    group: 
+    - :rails
+    version: ">= 0.6.3"
+    require: 
+    - text/format
+  libxml-ruby: 
     group: 
     - :default
-    version: ~> 0.11.0
+    version: ~> 1.1.3
+    require: 
+    - libxml
+  pg: 
+    group: 
+    - :pg
+    version: ~> 0.9.0
+    require: []
+
   sqlite3-ruby: 
     group: 
     - :development
@@ -58,14 +58,10 @@ dependencies:
     group: 
     - :plugins
     version: ~> 0.0.1
-  haml: 
+  mysql: 
     group: 
-    - :default
-    version: ~> 3.0.0.beta1
-  memcache-client: 
-    group: 
-    - :rails
-    version: ">= 1.7.4"
+    - :mysql
+    version: ~> 2.8.1
     require: []
 
   SystemTimer: 
@@ -74,26 +70,34 @@ dependencies:
     version: ~> 1.2.0
     require: 
     - system_timer
-  mysql: 
+  memcache-client: 
     group: 
-    - :mysql
-    version: ~> 2.8.1
+    - :rails
+    version: ">= 1.7.4"
     require: []
 
+  haml: 
+    group: 
+    - :default
+    version: ~> 3.0.0.beta1
   calendar_date_select: 
     group: 
     - :plugins
     version: ~> 1.15
+  tmail: 
+    group: 
+    - :rails
+    version: ~> 1.2.3
   whenever: 
     group: 
     - :default
     version: ~> 0.4.1
     require: []
 
-  tmail: 
+  crack: 
     group: 
-    - :rails
-    version: ~> 1.2.3
+    - :default
+    version: ~> 0.1.7
   acts-as-list: 
     group: 
     - :plugins
@@ -140,36 +144,32 @@ dependencies:
     group: 
     - :testing
     version: ~> 0.2.1
-  i18n: 
-    group: 
-    - :rails
-    version: ">= 0.1.3"
   rdiscount: 
     group: 
     - :default
     version: ~> 1.6.3
-  hpricot: 
+  i18n: 
+    group: 
+    - :rails
+    version: ">= 0.1.3"
+  aws-s3: 
     group: 
     - :default
-    version: ~> 0.8.2
+    version: ~> 0.6.2
+    require: 
+    - aws/s3
   builder: 
     group: 
     - :rails
     version: ~> 2.1.2
-  aws-s3: 
+  hpricot: 
     group: 
     - :default
-<<<<<<< HEAD
     version: ~> 0.8.2
   oauth2: 
     group: 
     - :default
     version: ">= 0"
-=======
-    version: ~> 0.6.2
-    require: 
-    - aws/s3
->>>>>>> 59a102e... Initial commit for hook with template
   capybara: 
     group: 
     - :testing
@@ -216,11 +216,7 @@ specs:
 - json_pure: 
     version: 1.4.3
 - selenium-webdriver: 
-<<<<<<< HEAD
-    version: 0.0.20
-=======
-    version: 0.0.22
->>>>>>> 59a102e... Initial commit for hook with template
+    version: 0.0.23
 - capybara: 
     version: 0.3.8
 - cgi_multipart_eof_fix: 
@@ -233,16 +229,18 @@ specs:
     version: 0.2.3
 - columnize: 
     version: 0.3.1
+- crack: 
+    version: 0.1.7
 - diff-lcs: 
     version: 1.1.2
 - trollop: 
     version: 1.16.2
 - gherkin: 
-    version: 1.0.30
+    version: 2.0.2
 - term-ansicolor: 
     version: 1.0.5
 - cucumber: 
-    version: 0.8.0
+    version: 0.8.3
 - cucumber-rails: 
     version: 0.3.2
 - daemons: 
@@ -258,19 +256,11 @@ specs:
 - gem_plugin: 
     version: 0.2.3
 - haml: 
-<<<<<<< HEAD
-    version: 3.0.9
-- hpricot: 
-    version: 0.8.2
-- i18n: 
-    version: 0.4.0
-=======
     version: 3.0.12
 - hpricot: 
     version: 0.8.2
 - i18n: 
     version: 0.4.1
->>>>>>> 59a102e... Initial commit for hook with template
 - icalendar: 
     version: 1.1.4
 - json: 
@@ -298,7 +288,7 @@ specs:
 - rails: 
     version: 2.3.8
 - rdiscount: 
-    version: 1.6.3.2
+    version: 1.6.5
 - rspec: 
     version: 1.3.0
 - rspec-rails: 
@@ -332,11 +322,7 @@ specs:
     version: 1.0.2
 - whenever: 
     version: 0.4.2
-<<<<<<< HEAD
-hash: f568abb83b5ec6a057b0d967a6fb5d8b399f8673
-=======
-hash: b6a0bbf27b735987d423216699030e2714a5a063
->>>>>>> 59a102e... Initial commit for hook with template
+hash: ac2b2bdc693c5b1b992d589dfbbc925c405638a2
 sources: 
 - Git: 
     uri: git://github.com/mislav/tolk.git
